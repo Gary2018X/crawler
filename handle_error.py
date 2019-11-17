@@ -11,7 +11,7 @@ threshold_of_article = 5  #设置的正文长度阈值
 #数据库操作函数
 def database(sql):
     type = sql.split(' ')[0].lower()
-    conn = pymysql.connect(host='127.0.0.1', user='root', password='Xts0916.', db='academic',charset='utf8')  # 连接数据库
+    conn = pymysql.connect(host='127.0.0.1', user='username', password='password', db='database_name',charset='utf8')  # 连接数据库
     cur = conn.cursor()  # 用于访问和操作数据库中的数据（一个游标，像一个指针）
     if type == 'select':
         cur.execute(sql)  # 执行操作
